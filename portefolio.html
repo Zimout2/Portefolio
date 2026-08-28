@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - DELVAUX Thomas</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Styles de base et petites améliorations dynamiques */
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #e0e0e0;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        text-align: center;
+        padding: 60px 20px 20px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        color: #a0a0a0;
+        font-size: 1.1rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: 1px solid #333;
+        transition:
+          background-color 0.2s,
+          transform 0.2s;
+      }
+
+      nav a:hover {
+        background-color: #333333;
+        transform: translateY(-2px);
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      section {
+        background-color: #1a1a1a;
+        margin-bottom: 30px;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #2a2a2a;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease-out,
+          transform 0.6s ease-out;
+      }
+
+      /* Classe ajoutée par le JS pour l'apparition au défilement */
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      section h2 {
+        margin-top: 0;
+        color: #ffffff;
+        border-bottom: 2px solid #333;
+        padding-bottom: 8px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin-bottom: 8px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      /* Style pour l'interaction de copie d'email */
+      .copy-email {
+        cursor: pointer;
+        color: #4da6ff;
+        text-decoration: underline;
+      }
+      .copy-feedback {
+        font-size: 0.85rem;
+        color: #00ffcc;
+        margin-left: 10px;
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .copy-feedback.show {
+        opacity: 1;
+      }
+      /* --- Placement de la vidéo en arrière-plan --- */
+      #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5; /* Ajustez entre 0.1 et 1 pour la luminosité */
+      }
+
+      /* --- Rendre le header et les sections semi-transparents --- */
+      header {
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 60px 20px 20px 20px;
+      }
+
+      section {
+        background-color: rgba(26, 26, 26, 0.75); /* Fond transparent */
+        backdrop-filter: blur(5px); /* Optionnel : effet de flou élégant */
+        margin-bottom: 30px;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay loop muted playsinline id="bg-video">
+      <source src="terre-qui-tourne.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <header>
+      <h1 id="main-title">DELVAUX Thomas</h1>
+      <p id="dynamic-greeting">Étudiant en B.U.T. Informatique</p>
+
+      <nav>
+        <a href="#propos">À propos</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="propos">
+        <h2>À propos</h2>
+        <br>
+          Passionné par l'informatique, particulièrement tout ce qui touche au
+          réseau informatique, je suis actuellement en B.U.T. 2 informatique à
+          l'IUT Nancy-Charlemagne.</br>
+          Une vision de moi :
+          <a
+            href="https://github.com/Zimout2/Ikigai"
+            target="_blank"
+            style="color: #4da6ff"
+            >Projet Ikigai</a
+          >.
+        </p>
+      </section>
+
+      <section id="parcours">
+        <h2>Parcours</h2>
+        <ul>
+          <li>
+            <strong>2026 :</strong> B.U.T. 2 en informatique à l'I.U.T Nancy
+            Charlemagne
+          </li>
+          <li>
+            <strong>2025 :</strong> B.U.T. 1 en informatique à l'I.U.T Nancy
+            Charlemagne
+          </li>
+          <li><strong>2024 :</strong> Obtention du Baccalauréat</li>
+        </ul>
+      </section>
+
+      <section id="projets">
+        <h2>Projets récents</h2>
+        <ul>
+          <li>
+            <strong>Portfolio :</strong> Développement de mon site personnel
+            (HTML, CSS).
+          </li>
+          <li>
+            <strong>Mon Web Portrait : </strong> Mon profil dans un monde numérique
+            <a
+              href="https://github.com/Zimout2/Mon-Web-portrait"
+              target="_blank"
+              style="color: #4da6ff"
+              >Projet GitHub</a
+            >.
+          </li>
+          <li>
+            <strong>Projet Monster :</strong> Application web interactive en
+            JavaScript
+            <a
+              href="https://github.com/Zimout2/Projet-Monster"
+              target="_blank"
+              style="color: #4da6ff"
+              >Projet GitHub</a
+            >.
+          </li>
+          <li>
+            <strong>Sokoban :</strong> Création d'un jeu de réflexion respectant
+            les bonnes pratiques de code
+            <a
+              href="https://github.com/Zimout2/Sokoban"
+              target="_blank"
+              style="color: #4da6ff"
+              >Projet GitHub</a
+            >.
+          </li>
+          <li>
+            <strong>Zeldiablo :</strong> Jeu développé en équipe par itérations
+            successives en Java
+            <a
+              href="https://github.com/KeasCrimson/2026_COO_Zeldiablo_RAPLOUCH"
+              target="_blank"
+              style="color: #4da6ff"
+              >Projet GitHub</a
+            >.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          <strong>Email :</strong>
+          <span id="email-text" class="copy-email" title="Cliquer pour copier"
+            >thomas.delvaux8@etu.univ-lorraine.fr</span
+          ><span id="feedback" class="copy-feedback"
+            >Copié dans le presse-papier !</span
+          >
+        </p>
+        <p>
+          <strong>GitHub :</strong>
+          <a
+            href="https://github.com/Zimout2"
+            target="_blank"
+            style="color: #4da6ff"
+            >Mon profil GitHub</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year">2026</span> - Thomas DELVAUX</p>
+    </footer>
+
+    <!-- Script JavaScript pour dynamiser la page -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Salutation dynamique selon l'heure
+        const greetingElement = document.getElementById("dynamic-greeting");
+        const hour = new Date().getHours();
+        let salutation =
+          "Bienvenue sur mon portfolio — Étudiant en B.U.T. Informatique";
+
+        if (hour >= 6 && hour < 18) {
+          salutation =
+            "Bienvenue sur mon portfolio — Étudiant en B.U.T. Informatique";
+        } else {
+          salutation =
+            "Bonsoir ! Bienvenue sur mon portfolio — Étudiant en B.U.T. Informatique";
+        }
+        greetingElement.textContent = salutation;
+
+        // 2. Animation d'apparition des sections au défilement (Scroll Reveal)
+        const sections = document.querySelectorAll("section");
+
+        const revealSection = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        const sectionObserver = new IntersectionObserver(revealSection, {
+          root: null,
+          threshold: 0.15,
+        });
+
+        sections.forEach((section) => {
+          sectionObserver.observe(section);
+        });
+
+        // 3. Copie interactive de l'email au clic
+        const emailElement = document.getElementById("email-text");
+        const feedbackElement = document.getElementById("feedback");
+
+        emailElement.addEventListener("click", () => {
+          const email = emailElement.textContent;
+          navigator.clipboard.writeText(email).then(() => {
+            feedbackElement.classList.add("show");
+            setTimeout(() => {
+              feedbackElement.classList.remove("show");
+            }, 2000);
+          });
+        });
+
+        // 4. Mise à jour automatique de l'année dans le footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
