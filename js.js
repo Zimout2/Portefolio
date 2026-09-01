@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Adaptation du message selon l'heure avec de l'effet
     if (hour >= 5 && hour < 12) {
-        salutation = "< Bonjour. Accès autorisé. Étudiant en B.U.T. Informatique >";
+        salutation = "< Bonjour. Etudiant en B.U.T. Informatique, session sécurisée autoriser uniquement. >";
     } else if (hour >= 12 && hour < 18) {
         salutation = "< Connexion établie. Étudiant en B.U.T. Informatique >";
     } else {
-        salutation = "< Bonsoir. Etudiant en B.U.T. Informatique, session sécurisée autoriser. >";
+        salutation = "< Bonsoir. Étudiant en B.U.T. Informatique, session sécurisée autoriser uniquement. >";
     }
     greetingElement.textContent = "";
     let i = 0;
