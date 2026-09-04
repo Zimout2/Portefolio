@@ -47,7 +47,7 @@ nav {
 }
 #logo-iut {
     position: absolute;
-    top: 15%;             /* Remonté pour s'aligner avec le texte (H1) */
+    top: 25%;             /* Remonté pour s'aligner avec le texte (H1) */
     left: 5%;             /* Collé à gauche */
     transform: translateY(-50%);
     width: 200px;         /* Ajusté pour équilibrer avec l'ANSSI */
@@ -65,7 +65,7 @@ nav {
 /* 2. Logo ANSSI (Aligné à droite) */
 #logo-anssi {
     position: absolute;
-    top: 15%;             /* MÊME HAUTEUR que le logo IUT */
+    top: 25%;             /* MÊME HAUTEUR que le logo IUT */
     right: 5%;            /* Collé à droite */
     transform: translateY(-50%);
     width: 220px;
